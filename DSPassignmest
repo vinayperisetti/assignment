@@ -1,0 +1,32 @@
+import folium
+from branca.element import Figure
+# from branca.element import Figure
+x=[[16.7911,80.8226],[16.564680,80.676933],[16.5193,80.6305],[16.18146,81.12999],[16.257929,81.144424],[16.250549,81.119400],[16.251873,81.120812]]
+x1=[[16.251873,81.120812],[16.250549,81.119400],[16.257929,81.144424],[16.429340,80.989922],[16.638350,80.969852],[16.564680,80.676933],[16.7911,80.8226]]
+y=[[16.251873,81.120812],[16.21500,81.087941],[16.31915,80.96268],[16.36000,80.83222],[16.42851,80.75944],[16.55238,80.80405],[16.67862,80.78416],[16.78695,80.84821],[16.7911,80.8226]]
+fig=Figure(width=550,height=350)
+map1=folium.Map(location=[16.7911, 80.8226],zoom_start=12,min_zoom=8,max_zoom=14)
+fig.add_child(map1)
+f1=folium.FeatureGroup("Vehicle 1")
+line_1=folium.vector_layers.PolyLine(x,popup='<b>Path of Vehicle_1</b>',tooltip='Vehicle_1',color='black',weight=10).add_to(f1)
+f2=folium.FeatureGroup("Home")
+line_2=folium.vector_layers.PolyLine(x1,popup='<b>Path of Vehicle_1</b>',tooltip='Vehicle_1',color='red',weight=10).add_to(f1)
+f1.add_to(map1)
+f2.add_to(map1)
+folium.Marker(location=[16.7911, 80.8226],popup='<h3 style="color:green;">college</h3>',tooltip='<strong>Click here to see </strong>',icon=folium.Icon(color='purple',prefix='fa',icon='fa-hospital-o')).add_to(map1)
+folium.Marker(location=[16.564680,80.676933],popup='<h3 style="color:green;">nuzvidu</h3>',tooltip='<strong>Click here to see </strong>',icon=folium.Icon(color='purple',prefix='fa',icon='fa-hospital-o')).add_to(map1)
+folium.Marker(location=[16.5193,80.6305],popup='<h3 style="color:green;">vijayawada</h3>',tooltip='<strong>Click here to see </strong>',icon=folium.Icon(color='purple',prefix='fa',icon='fa-hospital-o')).add_to(map1)
+folium.Marker(location=[16.18146,81.12999],popup='<h3 style="color:green;">machilipatnam</h3>',tooltip='<strong>Click here to see </strong>',icon=folium.Icon(color='purple',prefix='fa',icon='fa-hospital-o')).add_to(map1)
+folium.Marker(location=[16.257929,81.144424],popup='<h3 style="color:green;">pedana</h3>',tooltip='<strong>Click here to see </strong>',icon=folium.Icon(color='purple',prefix='fa',icon='fa-hospital-o')).add_to(map1)
+folium.Marker(location=[16.250549,81.119400],popup='<h3 style="color:green;">kappaladoddi</h3>',tooltip='<strong>Click here to see </strong>',icon=folium.Icon(color='purple',prefix='fa',icon='fa-hospital-o')).add_to(map1)
+folium.Marker(location=[16.251873,81.120812],popup='<h3 style="color:green;">home</h3>',tooltip='<strong>Click here to see </strong>',icon=folium.Icon(color='purple',prefix='fa',icon='fa-hospital-o')).add_to(map1)
+folium.Marker(location=[16.429340,80.989922],popup='<h3 style="color:green;">gudivada</h3>',tooltip='<strong>Click here to see </strong>',icon=folium.Icon(color='purple',prefix='fa',icon='fa-hospital-o')).add_to(map1)
+folium.Marker(location=[16.638350,80.969852],popup='<h3 style="color:green;">hanuman junction</h3>',tooltip='<strong>Click here to see </strong>',icon=folium.Icon(color='purple',prefix='fa',icon='fa-hospital-o')).add_to(map1)
+folium.Marker(location=[16.21500,81.087941],popup='<h3 style="color:green;">guduru</h3>',tooltip='<strong>Click here to see </strong>',icon=folium.Icon(color='purple',prefix='fa',icon='fa-hospital-o')).add_to(map1)
+folium.Marker(location=[16.31915,80.96268],popup='<h3 style="color:green;">pamarru</h3>',tooltip='<strong>Click here to see </strong>',icon=folium.Icon(color='purple',prefix='fa',icon='fa-hospital-o')).add_to(map1)
+folium.Marker(location=[16.36000,80.83222],popup='<h3 style="color:green;">vuyyuru</h3>',tooltip='<strong>Click here to see </strong>',icon=folium.Icon(color='purple',prefix='fa',icon='fa-hospital-o')).add_to(map1)
+folium.Marker(location=[16.42851,80.75944],popup='<h3 style="color:green;">kankipaadu</h3>',tooltip='<strong>Click here to see </strong>',icon=folium.Icon(color='purple',prefix='fa',icon='fa-hospital-o')).add_to(map1)
+folium.Marker(location=[16.55238,80.80405],popup='<h3 style="color:green;">gannavaram</h3>',tooltip='<strong>Click here to see </strong>',icon=folium.Icon(color='purple',prefix='fa',icon='fa-hospital-o')).add_to(map1)
+folium.Marker(location=[16.67862,80.78416],popup='<h3 style="color:green;">agiripalli</h3>',tooltip='<strong>Click here to see </strong>',icon=folium.Icon(color='purple',prefix='fa',icon='fa-hospital-o')).add_to(map1)
+# folium.Marker(location=[18.52660991883728, 83.30469709324593],popup='<h3 style="color:green;">Marker2</h3>',tooltip='<strong>Click here to see Guntur</strong>',icon=folium.Icon(color='orange',prefix='fa',icon='fa-graduation-cap')).add_to(map1)
+map1
